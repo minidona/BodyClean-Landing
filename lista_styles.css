@@ -1,0 +1,22 @@
+:root {
+    --bgColor: #ecf1f2;
+    --redColor: #ee5147;
+    --blueColor: #1782bd;
+    --mediumBlueColor: #54b3dd;
+    --lightBlueColor: #9fdcf1;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bgColor);
+    font-family: sans-serif;
+}
+
+h2 {
+    color: var(--redColor)
+}
+
+h3 {
+    color: var(--blueColor) 
+}
