@@ -7,6 +7,15 @@
     font-size: 62.5%;
 }
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
 body {
     font-size: 1.6rem;
     background-color: var(--bgColor);
@@ -14,9 +23,68 @@ body {
 }
 
 h2 {
-    color: var(--redColor)
+    color: var(--redColor);
+    font-weight: 900;
+    font-size: 5rem;
+    margin: 5rem auto auto;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+
+.Farmacias-Container {
+    max-width: 1200px;
+    margin: auto auto;
+    padding: 5rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+}
+
+.Farmacia {
+    /* margin: 3rem; */
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    transition: 300ms ease;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    /* border: 3px solid var(--lightBlueColor) */
+}
+
+.Farmacia:hover,
+.Farmacia:active {
+    scale: 1.08;
+    rotate: 2deg;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 
 h3 {
-    color: var(--blueColor) 
+    color: var(--blueColor);
+    font-weight: 900;
+    font-size: 2.5rem;;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+
+ul {
+    margin: auto auto;
+}
+
+ul li {
+    list-style-type: none;
+    line-height: 2.8rem;
+    font-weight: 600;
+    color: black;
+    text-align: center;
 }
