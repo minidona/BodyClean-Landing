@@ -7,6 +7,11 @@
     font-size: 62.5%;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
 *,
 *::before,
 *::after {
@@ -36,6 +41,46 @@ p {
     font-size: 2.5rem;
 }
 
+/* ---ABCD Links---- */
+
+.abcdContainer {
+    width: 85rem;
+    margin: 7rem auto 4rem auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    background-color: var(--blueColor);
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.abcdContainer a {
+    text-decoration: none;
+    font-weight: 900;
+    margin: 0 0.5rem;
+    transition: 200ms;
+    display: inline-block;
+    color: var(--bgColor)
+}
+
+.abcdContainer a:hover {
+    /* color: var(--redColor); */
+    scale: 1.8;
+}
+
+ a.noPueblo {
+    color: var(--mediumBlueColor);
+    opacity: ;
+}
+
+a.noPueblo:hover {
+    color: var(--mediumBlueColor);
+    scale: 1;
+}
+
+
+/* ---Famracias---- */
+
 .Farmacias-Container {
     max-width: 1200px;
     margin: auto auto;
@@ -48,7 +93,7 @@ p {
 
 .Farmacia {
     /* margin: 3rem; */
-    padding: 2rem;
+    /* padding: 2rem; */
     background-color: white;
     border-radius: 1.5rem;
     min-height: 30rem;
@@ -68,17 +113,21 @@ p {
 }
 
 h3 {
-    color: var(--blueColor);
+    background-color: var(--blueColor);
+    color: var(--bgColor);
     font-weight: 900;
     font-size: 2.5rem;;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
     text-align: center;
+    padding: 1rem;
+    border-radius: 1.5rem 1.5rem 0 0;
 }
 
 
 ul {
     margin: auto auto;
+    padding-bottom: 2rem;
 }
 
 ul li {
