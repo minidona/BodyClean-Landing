@@ -1,9 +1,68 @@
+/* ---FONTS--- */
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 200;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-Lt.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 200;
+    font-style: italic;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-LtIt.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 400;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-Rg.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 400;
+    font-style: italic;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-RgIt.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 700;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-Bd.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 700;
+    font-style: italic;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-BdIt.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 900;
+    src: url('assets/fonts/Montreux_Jazz_Soft/MontreuxJS-Blk.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 900;
+    font-style: italic;
+    src: url('assets/fonts/Montreux_Jazz_Soft/MontreuxJS-BlkIt.woff2') format('woff2');
+}
+
+/* ---Generals--- */
+
 :root {
     --bgColor: #ecf1f2;
     --redColor: #ee5147;
     --blueColor: #1782bd;
     --mediumBlueColor: #54b3dd;
     --lightBlueColor: #9fdcf1;
+    --grayColor: #565656;
+    --middleGrayColor: #747474;
+    --lightGrayColor: #a7a7a7;
     font-size: 62.5%;
 }
 
@@ -24,13 +83,17 @@ html {
 body {
     font-size: 1.6rem;
     background-color: var(--bgColor);
-    font-family: sans-serif;
+    font-family: 'Montreux-Grotesk', sans-serif;
 }
+
+/* ---Page--- */
 
 h2 {
     color: var(--redColor);
     font-weight: 900;
-    font-size: 5rem;
+    font-size: 8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
     margin: 5rem auto auto;
     text-align: center;
 }
@@ -44,11 +107,11 @@ p {
 /* ---ABCD Links---- */
 
 .abcdContainer {
-    width: 85rem;
+    max-width: 100rem;
     margin: 7rem auto 4rem auto;
     padding: 1rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     background-color: var(--blueColor);
     border-radius: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -117,22 +180,37 @@ h3 {
     font-weight: 900;
     font-size: 2.5rem;;
     text-transform: uppercase;
+    letter-spacing: 0.3rem;
+
     margin-bottom: 1.5rem;
     text-align: center;
     padding: 1rem;
     border-radius: 1.5rem 1.5rem 0 0;
+    /* width: 102%; */
 }
 
 
 ul {
     margin: auto auto;
-    padding-bottom: 2rem;
+    padding: 2rem;
 }
 
 ul li {
     list-style-type: none;
-    line-height: 2.8rem;
-    font-weight: 600;
-    color: black;
+    line-height: 3rem;
+    font-size: 1.8rem;;
+    font-weight: 700;
+    color: var(--middleGrayColor);
     text-align: center;
+    transition: 300ms ease;
+    padding: 0 1rem;
+    border-radius: 1rem;
+}
+
+ul li:hover {
+    scale: 1.1;
+    color: white;
+    background-color: var(--redColor);
+    /* margin: 0.5rem; */
+    
 }
