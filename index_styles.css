@@ -63,7 +63,6 @@
     --grayColor: #565656;
     --middleGrayColor: #747474;
     --lightGrayColor: #a7a7a7;
-
     --simpleShadow: 0px 3.5px 4px 0px rgba(0,0,0,0.25);
     --bigShadow: 0px 7px 18px -1px rgba(0,0,0,0.25); 
     font-size: 62.5%;
@@ -72,6 +71,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    overflow: scroll;
 }
 
 *,
@@ -80,14 +80,15 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 body {
     font-size: 1.6rem;
-    background-color: var(--bgColor);
-    color: var(--blueColor);
+    background-color: var(--blueColor);
+    color: var(--bgColor);
     font-family: 'Montreux-Grotesk', sans-serif;
+    text-align: center;
 }
 
 a, a:visited {
@@ -95,36 +96,41 @@ a, a:visited {
     text-decoration: none;
 }
 
-main {
-    /* background-color: red; */
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem;
-}
-
 section {
-    margin-bottom: 10rem;
+    /* margin: 2rem 0rem 2rem 0; */
+    padding: 4rem 0 5rem 0;
+    min-height: 30rem;
 }
 
-/* ---Page--- */
+.fpo {
+    font-size: 10rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: var(--lightGrayColor);
+    border: 4px solid black;
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+}
 
-h2 {
-    color: var(--redColor);
+.azul {
+    color: var(--blueColor)
+}
+
+.gris {
+    color: var(--grayColor)
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
     font-weight: 900;
-    font-size: 8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    margin: 5rem auto auto;
-    text-align: center;
-    width: 100%;
-    line-height: 8rem;
 }
 
-p {
-    text-align: center;
-    color: var(--grayColor);
-    margin-top: 2rem;
-    font-size: 2.5rem;
+h3 {
+    font-size: 2rem;
 }
 
 /* ----------------
@@ -137,11 +143,12 @@ p {
     bottom: 4rem;
     width: 5rem;
     height: 5rem;
-    background-color: var(--blueColor);
+    background-color: var(--bgColor);
     border-radius: 50%;
     transition: 200ms;
-    color: var(--bgColor);
+    color: var(--blueColor);
     box-shadow: var(--simpleShadow);
+    z-index: 3;
 
     display: flex;
     justify-content: center;
@@ -152,117 +159,6 @@ p {
 #back-to-top:hover {
     background-color: var(--redColor);
     color: var(--bgColor);
-}
-
-/* ---ABCD Links---- */
-
-.abcdContainer {
-    max-width: 100rem;
-    margin: 7rem auto 4rem auto;
-    padding: 1rem;
-    text-align: center;
-    font-size: 2.5rem;
-    background-color: var(--blueColor);
-    border-radius: 1.5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
-
-.abcdContainer a {
-    text-decoration: none;
-    font-weight: 900;
-    margin: 0 0.5rem;
-    transition: 200ms;
-    display: inline-block;
-    color: var(--bgColor)
-}
-
-.abcdContainer a:hover {
-    /* color: var(--redColor); */
-    scale: 1.8;
-}
-
- a.noPueblo {
-    color: var(--mediumBlueColor);
-}
-
-a.noPueblo:hover {
-    color: var(--mediumBlueColor);
-    scale: 1;
-}
-
-
-/* ---Famracias---- */
-
-.Farmacias-Container {
-    max-width: 1200px;
-    margin: auto auto;
-    padding: 5rem;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5rem;
-}
-
-.Farmacia {
-    /* margin: 3rem; */
-    /* padding: 2rem; */
-    background-color: white;
-    border-radius: 1.5rem;
-    min-height: 30rem;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    transition: 300ms ease;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    /* border: 3px solid var(--lightBlueColor) */
-}
-
-.Farmacia:hover,
-.Farmacia:active {
-    scale: 1.08;
-    rotate: 2deg;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-}
-
-h3 {
-    background-color: var(--blueColor);
-    color: var(--bgColor);
-    font-weight: 900;
-    font-size: 2.5rem;;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-
-    margin-bottom: 1.5rem;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 1.5rem 1.5rem 0 0;
-    /* width: 102%; */
-}
-
-
-.Farmacia > ul {
-    margin: auto auto;
-    padding: 2rem;
-}
-
-.Farmacia > ul li {
-    list-style-type: none;
-    line-height: 3rem;
-    font-size: 1.8rem;;
-    font-weight: 700;
-    color: var(--middleGrayColor);
-    text-align: center;
-    transition: 300ms ease;
-    padding: 0 1rem;
-    border-radius: 1rem;
-}
-
-.Farmacia > ul li:hover {
-    scale: 1.1;
-    color: white;
-    background-color: var(--redColor);
-    /* margin: 0.5rem; */
-    
 }
 
 /* ----------------
@@ -276,10 +172,7 @@ header {
     color: var(--bgColor);
     display: flex;
     text-align: center;
-    text-decoration: none;
     /* justify-content:space-around; */
-
-    
 }
 
 #logo, #header-link {
@@ -291,7 +184,6 @@ header {
     font-size: 4rem;
     margin: auto 2rem;
     transition: 500ms ease;
-    color: var(--blueColor);
 }
 
 #logo:hover {
@@ -304,7 +196,7 @@ nav {
     font-weight: bold;
 }
 
-#header-ul {
+ul {
     display: flex;
     list-style-type: none;
 }
@@ -312,7 +204,6 @@ nav {
 #header-link {
     margin: auto 2rem;
     transition: 300ms ease;
-    color: var(--blueColor);
 }
 
 #header-link:hover {
@@ -336,9 +227,174 @@ nav {
 }
 
 .boton-rojo > p {
-    color: var(--bgColor);
     font-size: 2rem;
     font-weight: 700;
     margin: auto auto;
 }
 
+/* ----------------
+    HERO SECTION
+----------------- */
+
+#hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.circulo-rojo-hero {
+    width: 45rem;
+    height: 45rem;
+    background-color: var(--redColor);
+    border-radius: 50%;
+    margin-right: 6rem;
+    box-shadow: var(--bigShadow);
+    aspect-ratio: 1/1;
+    justify-self: center;
+}
+
+.foto-empaque-hero {
+    aspect-ratio: 1/1;
+    width: 45rem;
+}
+
+/* ------------------------
+    DESCRIPCIÓN SECTION
+--------------------------- */
+
+#descripcion {
+    background-color: var(--bgColor);
+}
+
+.descripcion-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 5rem auto;
+}
+
+.paño {
+    height: 400px;
+}
+
+/* ------------------------
+    COMO FUNCIONA SECTION
+--------------------------- */
+
+#como-funciona {
+    background-color: var(--blueColor);
+    width: 100%;
+    color: var(--bgColor);
+}
+
+.como-funciona-title {
+    /* margin-top: 6rem; */
+    color: var(--redColor);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 5rem auto 0rem auto;
+}
+
+.como-funciona-paso {
+    margin: 0 4rem;
+    max-width: 30rem;
+}
+
+.paso-circulo {
+    border: 1.5rem solid var(--redColor);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: var(--bgColor);
+    color: var(--blueColor);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.paso-copy {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#video-frame {
+    display: flex;
+    margin: auto auto;
+    padding: 0 6rem;
+    max-width: 800px;
+    min-width: 600px;
+    position: relative;
+}
+
+#video-explicacion {
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: 30px;
+    /* border: 10px solid var(--bgColor); */
+    box-shadow: var(--bigShadow);
+  }
+
+
+/* ------------------------
+      /* COMPRA SECTION
+--------------------------- */
+
+#compra {
+    background-color: var(--bgColor);
+}
+
+
+
+.foto-paquete-compra {
+    margin: 0 2rem;
+    padding: 4rem;
+}
+
+.boton-grande {
+    width: fit-content;
+    margin: 5rem auto 0rem auto;
+}
+
+.boton-grande p {
+    font-size: 5rem;
+}
+
+/* ------------------------
+      CONTACTO SECTION
+--------------------------- */
+
+#contacto {
+    background-color: var(--blueColor);
+}
+
+.contacto-item {
+    
+}
+
+/* ------------------------
+       FOOTER SECTION 
+--------------------------- */
+
+footer {
+    background-color: var(--redColor);
+    height: 6rem;
+}
+
+#footer-wrapper {
+    max-width: 1200px;
+    margin: auto auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#socials-wrapper {
+    
+}
