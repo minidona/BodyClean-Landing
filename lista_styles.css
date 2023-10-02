@@ -72,6 +72,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    
 }
 
 *,
@@ -88,6 +89,7 @@ body {
     background-color: var(--bgColor);
     color: var(--blueColor);
     font-family: 'Montreux-Grotesk', sans-serif;
+    text-align: center;
 }
 
 a, a:visited {
@@ -95,15 +97,10 @@ a, a:visited {
     text-decoration: none;
 }
 
-main {
-    /* background-color: red; */
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem;
-}
-
 section {
-    margin-bottom: 10rem;
+    /* margin: 2rem 0rem 2rem 0; */
+    padding: 4rem 0 5rem 0;
+    min-height: 30rem;
 }
 
 /* ---Page--- */
@@ -120,7 +117,7 @@ h2 {
     line-height: 8rem;
 }
 
-p {
+main p {
     text-align: center;
     color: var(--grayColor);
     margin-top: 2rem;
@@ -152,6 +149,84 @@ p {
 #back-to-top:hover {
     background-color: var(--redColor);
     color: var(--bgColor);
+}
+
+
+/* ----------------
+    Barrita NAV
+----------------- */
+
+header {
+    width: fit-content;
+    margin: 3rem auto;
+    /* background-color: var(--grayColor); */
+    color: var(--bgColor);
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    /* justify-content:space-around; */
+
+    
+}
+
+#logo, #header-link {
+    margin: auto auto;
+}
+
+#logo {
+    font-weight: 900;
+    font-size: 4rem;
+    margin: auto 2rem;
+    transition: 500ms ease;
+    color: var(--blueColor);
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    margin: auto 2rem;
+    font-weight: bold;
+}
+
+#header-ul {
+    display: flex;
+    list-style-type: none;
+}
+
+#header-link {
+    margin: auto 2rem;
+    transition: 300ms ease;
+    color: var(--blueColor);
+}
+
+#header-link:hover {
+    transform: scale(1.1);
+    font-weight: 600;
+    text-decoration: underline 3px;
+}
+
+.boton-rojo {
+    background-color: var(--redColor);
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    display: flex;
+    margin: auto 2rem;
+    transition: 200ms ease;
+    box-shadow: var(--simpleShadow);
+}
+
+.boton-rojo:hover {
+    transform: scale(1.1);
+}
+
+.boton-rojo > p {
+    color: var(--bgColor);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: auto auto;
 }
 
 /* ---ABCD Links---- */
@@ -265,80 +340,58 @@ h3 {
     
 }
 
-/* ----------------
-    Barrita NAV
------------------ */
+/* ------------------------
+       FOOTER SECTION 
+--------------------------- */
 
-header {
-    width: fit-content;
-    margin: 3rem auto;
-    /* background-color: var(--grayColor); */
-    color: var(--bgColor);
+footer {
+    background-color: var(--redColor);
+    height: 8rem;
     display: flex;
-    text-align: center;
-    text-decoration: none;
-    /* justify-content:space-around; */
-
-    
+    justify-content: space-between;
+    padding: 2rem;
+    color: var(--bgColor)
 }
 
-#logo, #header-link {
-    margin: auto auto;
-}
-
-#logo {
-    font-weight: 900;
-    font-size: 4rem;
-    margin: auto 2rem;
-    transition: 500ms ease;
-    color: var(--blueColor);
-}
-
-#logo:hover {
-    transform: scale(1.1);
-}
-
-nav {
-    display: flex;
-    margin: auto 2rem;
-    font-weight: bold;
-}
-
-#header-ul {
+footer ul {  
     display: flex;
     list-style-type: none;
 }
 
-#header-link {
-    margin: auto 2rem;
-    transition: 300ms ease;
-    color: var(--blueColor);
+#footer-wrapper p {
+    font-weight: 300;
+    color: var(--bgColor)
 }
 
-#header-link:hover {
-    transform: scale(1.1);
+#footer-diabe-link {
+    transition: 100ms;
+    text-decoration: underline;
+    scale: 3;
+}
+
+#footer-diabe-link:hover{
+    /* color: var(--blueColor); */
     font-weight: 600;
-    text-decoration: underline 3px;
 }
 
-.boton-rojo {
-    background-color: var(--redColor);
-    padding: 1rem 4rem;
-    border-radius: 1rem;
+#footer-wrapper {
+    width: 1200px;
+    margin: 2rem auto 2rem auto;
     display: flex;
-    margin: auto 2rem;
-    transition: 200ms ease;
-    box-shadow: var(--simpleShadow);
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
 }
 
-.boton-rojo:hover {
-    transform: scale(1.1);
+.social {
+    font-size: 3rem;
+    margin: auto 1rem;
+    transition: 200ms
 }
 
-.boton-rojo > p {
-    color: var(--bgColor);
-    font-size: 2rem;
-    font-weight: 700;
-    margin: auto auto;
+.social:hover {
+    scale:1.3;
 }
+
+
 

@@ -63,15 +63,16 @@
     --grayColor: #565656;
     --middleGrayColor: #747474;
     --lightGrayColor: #a7a7a7;
+
     --simpleShadow: 0px 3.5px 4px 0px rgba(0,0,0,0.25);
     --bigShadow: 0px 7px 18px -1px rgba(0,0,0,0.25); 
     font-size: 62.5%;
+    --maxWidth: 1200px;
 }
 
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
-    overflow: scroll;
 }
 
 *,
@@ -125,12 +126,16 @@ section {
 
 h1 {
     text-align: center;
-    font-size: 5rem;
+    font-size: 8rem;
     font-weight: 900;
 }
 
 h3 {
     font-size: 2rem;
+}
+
+p {
+    text-wrap: balance;
 }
 
 /* ----------------
@@ -273,12 +278,37 @@ ul {
 .descripcion-wrapper {
     display: flex;
     justify-content: center;
-    max-width: 1200px;
+    max-width: var(--maxWidth);
     margin: 5rem auto;
 }
 
 .paño {
     height: 400px;
+}
+
+#descripcion .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.uso-item {
+    margin: 0 2rem;
+    max-width: 30rem;
+    transition: 300ms;
+}
+
+.uso-circulo{
+    border: 10px solid var(--redColor);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: var(--bgColor);
+    color: var(--blueColor);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 900;
 }
 
 /* ------------------------
@@ -287,32 +317,77 @@ ul {
 
 #como-funciona {
     background-color: var(--blueColor);
-    width: 100%;
     color: var(--bgColor);
+    padding: 10rem 0;
 }
 
-.como-funciona-title {
+#como-funciona-title {
     /* margin-top: 6rem; */
     color: var(--redColor);
+    paint-order: fill stroke;
+    text-shadow:
+        3px 3px 0 var(--bgColor),
+        -3px 3px 0 var(--bgColor),
+        -3px -3px 0 var(--bgColor),
+        3px -3px 0 var(--bgColor),
+        0px 8px 6px rgba(0, 0, 0, 0.25); 
+    /* text-shadow: 0px 8px 6px rgba(0, 0, 0, 0.25); */
 }
+
+#como-funciona h3 {
+    max-width: var(--maxWidth);
+    text-wrap: balance;
+}
+
+#cf-video-intro {
+    margin: 6rem auto 2rem auto;
+    font-size: 4rem;
+}
+
+#cf-video-desc {
+    margin: 5rem auto 10rem auto;    
+}
+
+#video-frame {
+    display: flex;
+    margin: auto auto;
+    padding: 0 6rem;
+    max-width: 1200px;
+    min-width: 600px;
+    position: relative;
+}
+
+#video-explicacion {
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: 50px;
+    border: 5px solid var(--bgColor);
+    box-shadow: var(--bigShadow);
+  }
 
 .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: var(--maxWidth);
     margin: 5rem auto 0rem auto;
 }
 
 .como-funciona-paso {
     margin: 0 4rem;
     max-width: 30rem;
+    transition: 300ms;
+}
+
+.como-funciona-paso:hover {
+    scale: 1.1;
 }
 
 .paso-circulo {
     border: 1.5rem solid var(--redColor);
     border-radius: 50%;
+    width: 30rem;
     aspect-ratio: 1/1;
     background-color: var(--bgColor);
     color: var(--blueColor);
@@ -327,25 +402,8 @@ ul {
 .paso-copy {
     text-align: center;
     margin-top: 2rem;
+    font-size: 2rem;
 }
-
-#video-frame {
-    display: flex;
-    margin: auto auto;
-    padding: 0 6rem;
-    max-width: 800px;
-    min-width: 600px;
-    position: relative;
-}
-
-#video-explicacion {
-    aspect-ratio: 16/9;
-    width: 100%;
-    border-radius: 30px;
-    /* border: 10px solid var(--bgColor); */
-    box-shadow: var(--bigShadow);
-  }
-
 
 /* ------------------------
       /* COMPRA SECTION
@@ -355,16 +413,35 @@ ul {
     background-color: var(--bgColor);
 }
 
-
+#compra .wrapper {
+    margin-top: 10rem;
+}
 
 .foto-paquete-compra {
     margin: 0 2rem;
     padding: 4rem;
 }
 
+.foto-paquete-compra:hover {
+    background-color: var(--redColor);
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    0% { transform:translateY(0%); }
+    15% { transform:translateY(-10%); }
+    20% { transform:translateY(0%); }
+    35% { transform:translateY(-10%); }
+    40% { transform:translateY(0%); }
+    45% { transform:translateY(-5%); }
+    50% { transform:translateY(0%); }
+    55% { transform:translateY(-2%); }
+    60% { transform:translateY(0); }
+}
+
 .boton-grande {
     width: fit-content;
-    margin: 5rem auto 0rem auto;
+    margin: 5rem auto 5rem auto;
 }
 
 .boton-grande p {
@@ -387,7 +464,7 @@ ul {
 }
 
 #contacto-wrapper {
-    max-width: 1200px;
+    max-width: var(--maxWidth);
     margin: 8rem auto 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -402,6 +479,16 @@ ul {
     font-size: 1.8rem;
     margin-top: 2rem;
     padding: 0 2rem
+}
+
+.contacto-item {
+    transition: 300ms;
+}
+
+.contacto-item:hover,
+.contacto-item:active,
+.contacto-item:focus {
+    scale: 1.3;
 }
 
 /* ------------------------
