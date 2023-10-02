@@ -446,6 +446,6 @@ footer p {
     transition: 200ms
 }
 
-/* .social:hover { */
+.social:hover {
     scale:1.3;
 }
