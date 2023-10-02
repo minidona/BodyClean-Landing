@@ -80,7 +80,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 body {
@@ -373,10 +373,31 @@ ul {
 
 #contacto {
     background-color: var(--blueColor);
+    margin: 8rem auto 10rem auto;
 }
 
-.contacto-item {
-    
+#contacto h3 {
+    font-weight: 200;
+    margin-top: 2rem;
+    padding: 0 6rem;
+}
+
+#contacto-wrapper {
+    max-width: 1200px;
+    margin: 8rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contacto-item  i{
+    font-size: 8rem;
+}
+
+.contacto-item p {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    padding: 0 2rem
 }
 
 /* ------------------------
@@ -385,16 +406,37 @@ ul {
 
 footer {
     background-color: var(--redColor);
-    height: 6rem;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+footer p {
+    font-weight: 300;
+}
+
+#footer-diabe-link {
+    transition: 100ms;
+    text-decoration: underline;
+    scale: 3;
+}
+
+#footer-diabe-link:hover{
+    /* color: var(--blueColor); */
+    font-weight: 600;
 }
 
 #footer-wrapper {
-    max-width: 1200px;
-    margin: auto auto;
+    width: 1200px;
+    margin: 2rem auto 2rem auto;
     display: flex;
+    /* flex-direction: column; */
     justify-content: space-between;
+    align-items: center;
 }
 
-#socials-wrapper {
-    
+.social {
+    font-size: 3rem;
+    margin: auto 1rem;
 }
