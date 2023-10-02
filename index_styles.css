@@ -1,0 +1,442 @@
+/* ---FONTS--- */
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 200;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-Lt.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 200;
+    font-style: italic;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-LtIt.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 400;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-Rg.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 400;
+    font-style: italic;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-RgIt.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 700;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-Bd.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 700;
+    font-style: italic;
+    src: url('assets/fonts/Montreux_Grotesk_Soft/MontreuxGS-BdIt.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 900;
+    src: url('assets/fonts/Montreux_Jazz_Soft/MontreuxJS-Blk.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montreux-Grotesk';
+    font-weight: 900;
+    font-style: italic;
+    src: url('assets/fonts/Montreux_Jazz_Soft/MontreuxJS-BlkIt.woff2') format('woff2');
+}
+
+/* ---Generals--- */
+
+:root {
+    --bgColor: #ecf1f2;
+    --redColor: #ee5147;
+    --blueColor: #1782bd;
+    --mediumBlueColor: #54b3dd;
+    --lightBlueColor: #9fdcf1;
+    --grayColor: #565656;
+    --middleGrayColor: #747474;
+    --lightGrayColor: #a7a7a7;
+    --simpleShadow: 0px 3.5px 4px 0px rgba(0,0,0,0.25);
+    --bigShadow: 0px 7px 18px -1px rgba(0,0,0,0.25); 
+    font-size: 62.5%;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow: scroll;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--blueColor);
+    color: var(--bgColor);
+    font-family: 'Montreux-Grotesk', sans-serif;
+    text-align: center;
+}
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    /* margin: 2rem 0rem 2rem 0; */
+    padding: 4rem 0 5rem 0;
+    min-height: 30rem;
+}
+
+.fpo {
+    font-size: 10rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: var(--lightGrayColor);
+    border: 4px solid black;
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+}
+
+.azul {
+    color: var(--blueColor)
+}
+
+.gris {
+    color: var(--grayColor)
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+/* ----------------
+    Back to Top
+------------------- */
+
+#back-to-top {
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--bgColor);
+    border-radius: 50%;
+    transition: 200ms;
+    color: var(--blueColor);
+    box-shadow: var(--simpleShadow);
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#back-to-top:hover {
+    background-color: var(--redColor);
+    color: var(--bgColor);
+}
+
+/* ----------------
+    Barrita NAV
+----------------- */
+
+header {
+    width: fit-content;
+    margin: 3rem auto;
+    /* background-color: var(--grayColor); */
+    color: var(--bgColor);
+    display: flex;
+    text-align: center;
+    /* justify-content:space-around; */
+}
+
+#logo, #header-link {
+    margin: auto auto;
+}
+
+#logo {
+    font-weight: 900;
+    font-size: 4rem;
+    margin: auto 2rem;
+    transition: 500ms ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    margin: auto 2rem;
+    font-weight: bold;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+#header-link {
+    margin: auto 2rem;
+    transition: 300ms ease;
+}
+
+#header-link:hover {
+    transform: scale(1.1);
+    font-weight: 600;
+    text-decoration: underline 3px;
+}
+
+.boton-rojo {
+    background-color: var(--redColor);
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    display: flex;
+    margin: auto 2rem;
+    transition: 200ms ease;
+    box-shadow: var(--simpleShadow);
+}
+
+.boton-rojo:hover {
+    transform: scale(1.1);
+}
+
+.boton-rojo > p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: auto auto;
+}
+
+/* ----------------
+    HERO SECTION
+----------------- */
+
+#hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.circulo-rojo-hero {
+    width: 45rem;
+    height: 45rem;
+    background-color: var(--redColor);
+    border-radius: 50%;
+    margin-right: 6rem;
+    box-shadow: var(--bigShadow);
+    aspect-ratio: 1/1;
+    justify-self: center;
+}
+
+.foto-empaque-hero {
+    aspect-ratio: 1/1;
+    width: 45rem;
+}
+
+/* ------------------------
+    DESCRIPCIÓN SECTION
+--------------------------- */
+
+#descripcion {
+    background-color: var(--bgColor);
+}
+
+.descripcion-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 5rem auto;
+}
+
+.paño {
+    height: 400px;
+}
+
+/* ------------------------
+    COMO FUNCIONA SECTION
+--------------------------- */
+
+#como-funciona {
+    background-color: var(--blueColor);
+    width: 100%;
+    color: var(--bgColor);
+}
+
+.como-funciona-title {
+    /* margin-top: 6rem; */
+    color: var(--redColor);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 5rem auto 0rem auto;
+}
+
+.como-funciona-paso {
+    margin: 0 4rem;
+    max-width: 30rem;
+}
+
+.paso-circulo {
+    border: 1.5rem solid var(--redColor);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: var(--bgColor);
+    color: var(--blueColor);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.paso-copy {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#video-frame {
+    display: flex;
+    margin: auto auto;
+    padding: 0 6rem;
+    max-width: 800px;
+    min-width: 600px;
+    position: relative;
+}
+
+#video-explicacion {
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: 30px;
+    /* border: 10px solid var(--bgColor); */
+    box-shadow: var(--bigShadow);
+  }
+
+
+/* ------------------------
+      /* COMPRA SECTION
+--------------------------- */
+
+#compra {
+    background-color: var(--bgColor);
+}
+
+
+
+.foto-paquete-compra {
+    margin: 0 2rem;
+    padding: 4rem;
+}
+
+.boton-grande {
+    width: fit-content;
+    margin: 5rem auto 0rem auto;
+}
+
+.boton-grande p {
+    font-size: 5rem;
+}
+
+/* ------------------------
+      CONTACTO SECTION
+--------------------------- */
+
+#contacto {
+    background-color: var(--blueColor);
+    margin: 8rem auto 10rem auto;
+}
+
+#contacto h3 {
+    font-weight: 200;
+    margin-top: 2rem;
+    padding: 0 6rem;
+}
+
+#contacto-wrapper {
+    max-width: 1200px;
+    margin: 8rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contacto-item  i{
+    font-size: 8rem;
+}
+
+.contacto-item p {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    padding: 0 2rem
+}
+
+/* ------------------------
+       FOOTER SECTION 
+--------------------------- */
+
+footer {
+    background-color: var(--redColor);
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+footer p {
+    font-weight: 300;
+}
+
+#footer-diabe-link {
+    transition: 100ms;
+    text-decoration: underline;
+    scale: 3;
+}
+
+#footer-diabe-link:hover{
+    /* color: var(--blueColor); */
+    font-weight: 600;
+}
+
+#footer-wrapper {
+    width: 1200px;
+    margin: 2rem auto 2rem auto;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social {
+    font-size: 3rem;
+    margin: auto 1rem;
+}
