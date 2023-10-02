@@ -156,6 +156,10 @@ h3 {
     font-size: 2rem;
 }
 
+#back-to-top i {
+    transition: 0ms;
+}
+
 #back-to-top:hover {
     background-color: var(--redColor);
     color: var(--bgColor);
@@ -439,4 +443,9 @@ footer p {
 .social {
     font-size: 3rem;
     margin: auto 1rem;
+    transition: 200ms
+}
+
+/* .social:hover { */
+    scale:1.3;
 }
