@@ -66,9 +66,9 @@
     --lightGrayColor: #a7a7a7;
 
     --bgGradient:
-    var(--bgColor) 0%,
-    var(--bgColor) 50%,
-    #c5d5d9 100%;
+         var(--bgColor) 0%,
+         var(--bgColor) 80%,
+         #c5d5d9 100%;
 
     --simpleShadow: 0px 3.5px 4px 0px rgba(0,0,0,0.25);
     --bigShadow: 0px 7px 18px -1px rgba(0,0,0,0.25); 
@@ -79,7 +79,9 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem; 
+    scroll-padding-top: 5rem;
+    
+    
 }
 
 *,
@@ -121,6 +123,12 @@ section {
     animation: ola 1.5s ease;
 }
 
+main {
+    max-width: var(--maxWidth);
+    margin: auto auto;
+    /* z-index: -1; */
+}
+
 /* ----------------
     Back to Top
 ------------------- */
@@ -157,8 +165,8 @@ section {
 header {
     /* width: 100%; */
     margin: 2rem auto;
-    z-index: 3;
     color: var(--bgColor);
+    /* z-index: 1; */
     /* display: flex;
     justify-content: space-evenly; */
 
@@ -204,7 +212,6 @@ nav {
     padding: 2rem;
     /* margin: auto 2rem; */
     font-weight: bold;
-    z-index: 5;
 
     & ul {
         display: flex;
@@ -253,12 +260,9 @@ nav {
     OPENING SECTION
 ---------------------- */
 
-#opening-listas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* z-index: -3; */
+#headline {
+    position: relative;
+    z-index: -2;
 }
 
 h1 {
@@ -274,136 +278,47 @@ h1 {
     z-index: -3;
 }
 
-main p {
+h2 {
     text-align: center;
+    width: 100rem;
     color: var(--grayColor);
     margin-top: 2rem;
+    margin-inline: auto;
     font-size: 2.5rem;
-
+    text-wrap: balance;
     z-index: -3;
 }
 
 
+/* ------------------------
+     PREGUNTAS SECTION 
+--------------------------- */
 
-/* -------------------
-      ABCDE Links
----------------------- */
+#preguntas {
+    position: relative;
+    z-index: -2;
+}
 
-#abcdContainer {
+.faq-pregunta {
+    margin-bottom: 5rem;
+    /* z-index: -3; */
 
-    z-index: -3;
-    max-width: 100rem;
-    margin: 14rem 2rem 4rem 2rem;
-    padding: 1rem;
-    text-align: center;
-    font-size: 2.5rem;
-    background-color: var(--blueColor);
-    border-radius: 1.5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-
-    & a {
-        text-decoration: none;
-        font-weight: 900;
-        margin: 0 0.5rem;
-        transition: 200ms;
-        display: inline-block;
-        color: var(--bgColor)
+    & h3 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        z-index: -3;
     }
 
-    & a.noPueblo {
-        color: var(--mediumBlueColor);
+    & p {
+        text-wrap: balance;
+        font-size: 2rem;
+        color: var(--grayColor);
+        z-index: -3;
     }
 }
 
-#abcdContainer a:hover {
-    /* color: var(--redColor); */
-    scale: 1.8;
-}
-
-a.noPueblo:hover {
-    color: var(--mediumBlueColor);
-    scale: 1.5;
-}
-
-
-
-/* -------------------
-      Farmacias
----------------------- */
-
-
-.Farmacias-Container {
-
-    z-index: -3;
-    max-width: 1200px;
-    margin: auto auto;
-    padding: 5rem;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5rem;
-}
-
-.Farmacia {
-    /* margin: 3rem; */
-    /* padding: 2rem; */
-    background-color: white;
-    /* border: 3px solid var(--blueColor); */
-    border-radius: 2rem;
-    min-height: 30rem;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    transition: 300ms ease;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
-
-.Farmacia:hover,
-.Farmacia:active {
-    scale: 1.08;
-    rotate: 2deg;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-}
-
-h3 {
-    background-color: var(--blueColor);
-    color: var(--bgColor);
-    font-weight: 900;
-    font-size: 2.5rem;;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-
-    margin-bottom: 1.5rem;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 1.5rem 1.5rem 0 0;
-    /* width: 102%; */
-}
-
-
-.Farmacia > ul {
-    margin: auto auto;
-    padding: 2rem;
-}
-
-.Farmacia > ul li {
-    list-style-type: none;
-    line-height: 3rem;
-    font-size: 1.8rem;;
-    font-weight: 700;
-    color: var(--middleGrayColor);
-    text-align: center;
-    transition: 300ms ease;
-    padding: 0 1rem;
-    border-radius: 1rem;
-}
-
-.Farmacia > ul li:hover {
-    scale: 1.1;
-    color: white;
-    background-color: var(--redColor);
-    /* margin: 0.5rem; */
-    
+.faq-pregunta:nth-of-type(1) {
+    margin-top: 10rem;
 }
 
 /* ------------------------
@@ -417,7 +332,7 @@ footer {
     justify-content: space-between;
     padding: 2rem;
     color: var(--bgColor);
-    margin-top: 8rem
+    margin-top: 15rem
 }
 
 footer ul {  
