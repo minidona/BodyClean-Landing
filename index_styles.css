@@ -59,8 +59,8 @@
 :root {
     --bgColor: #ecf1f2;
     --redColor: #ee5147;
-    --blueColor: #1884bf;
-    /* --blueColor: #0072d5; */
+    --blueColor: #1782bd;
+    /* --blueColor: #1884bf; */
     /* --blueColor: #0f75bd; */
     /* --mediumBlueColor:var(--blueColor); */
     --mediumBlueColor: #51b1dd;
@@ -218,7 +218,7 @@ header {
     /* overflow: hidden; */
 
     & img {
-        margin-top: -4%;
+        margin-top: -2%;
     }
 }
 
@@ -247,6 +247,7 @@ ul {
     margin: auto 2rem;
     transition: 300ms ease;
     font-size: 1.8rem;
+
 }
 
 #header-link:hover {
@@ -275,7 +276,6 @@ ul {
 .boton-rojo:hover {
     transform: scale(1.1);
 }
-
 
 
 /* ----------------
